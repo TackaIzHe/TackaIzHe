@@ -64,7 +64,7 @@ export const chatExamplee = (app) => {
         posts.members.push(memberID);
         res.json(posts)
     })
-    app.delete('/chats/:id/members/:membersId', (req,res) =>{
+    app.delete('/chats/:id/members/:memberId', (req,res) =>{
         const id = Number(req.params.id);
         const memberID = Number(req.params.memberId);
         const user = chatss[id].members;

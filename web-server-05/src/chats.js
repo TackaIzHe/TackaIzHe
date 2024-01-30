@@ -39,7 +39,7 @@ export const chatExamplee = (app) => {
         }
 
         putt.title = req.body.title;
-        const putt1 = chatss.find(item => item.id === id)
+        //const putt1 = chatss.find(item => item.id === id)
         res.json(putt1);
     });
     app.delete("/chats/:id", (req, res) => {
@@ -82,11 +82,27 @@ export const chatExamplee = (app) => {
     })
     app.post('/chats/:id/messages', (req,res)=>{
         
-        let msg = {
+        const msg = {
             id:id++,
+            chatId:Number(req.params.id),
             content: req.body.content
         }
         messages.push(msg);
         res.json(msg);
     })
+    ////в процесе
+
+    app.get("/chats/:id/messages", (req,res)=>{
+        const per=[];
+        const id = Number(req.params.id);
+        for(let i =0;)
+        const mesid=messages.find(item=>item.chatId===id);
+        res.json(mesid);
+    })
+    app.put("/chats/:id/messages/:messageId",(req,res)=>{
+        const id = Number(req.params.id);
+        const mesid = Number(req.params.messageId);
+        const user = chatss[id].content
+    })
+    ////
 }

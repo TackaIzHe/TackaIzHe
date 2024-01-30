@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <body>
+        <form method="post">
+            <!--тег "Label" добавлет тросто текст-->
+            <label for = "Login">Введите Логин:</label>
+            <!--"input" добавляет зону заполнения пользователем.
+            "Placeholder" - подсказка в текстовом поле,
+            maxlength - макс.длинна,
+            "Login", "id" - индетификаторы для JS-->
+            <input type= "text" placeholder="Ваш Логин:" maxlength="10" name = "Login" id = "Login"><br>
+            <label for = "password">Введите пароль:</label>
+            <input type= "password" placeholder="Ваш пароль:" maxlength="15" name="password" id = "password"><br>
+            <label for = "Email">Введите вашу почту:</label>
+            <input type= "email" placeholder="Ваш Email:" name="Email" id = "Email"><br>
+            <label for = "Color">Ваш любимый цвет:</label>
+            <input type= "color" name="Color" id="Color"><br>
+            <label for= "Date">Дата вашего рождения:</label>
+            <input type="date" name= "Date" id = "Date"><br>
+            <label for = "time">Введите желаемое время:</label>
+            <input type="time" name = "time" id = "time"><br>
+            <label for= "checbox">Я соглашаюсь c правилами сайта:</label>
+            <input type="checkbox" name = "checbox" id = "checbox"><br>
+            <label for="radio">Укажите ваш пол:</label>
+            <input type="radio" name="radio" id="radio">
+            <label for="radio">Мужской</label>
+            <input type="radio" name="radio" id="radio">
+            <label for="radio">Женский</label><br>
+            <label for = "file">Выберите файл:</label>
+            <input type="file" name="file" id="file"><br>
+            <label for="search">Поиск по странице:</label>
+            <input type="search" name = "search" id="search"><br>
+            <input type="submit" value="Отправить"><br>
+            <input type="reset" value="Очистить все">
+            
+        </form>
+    </body>
+    </head>
+</html>

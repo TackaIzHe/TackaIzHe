@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- Имя автора страницы-->
+    <meta name = "author" content="Nikita">
+    <!-- Описание страницы -->
+    <meta name="description" content="Test Site">
+    <!-- Ключевые слова для страницы-->
+    <meta name="keywords" content="Valorant, agent, search, Riot">
+    <!-- Название страницы -->
+<title>Поиск агента Valorant</title>
+<!-- Подключение Css файлов-->
+<link rel="stylesheet" href = "css/main.css">
+</head>
+<body>
+    <!-- Размер шрифта-->
+<h2>VALORANT</h2>
+<!-- Ссылка якорь, передвижение по странице, перемещает нас к тегу Dawn-->
+<a href = "#Dawn">Вниз</a> 
+<a name = "UP"></a>
+<!-- Новый заголовок (<p>), и выделение жирным шрифтом (b), можно использовать (<strong>)-->
+<p><b>Введите имя агента:</b></p>
+<!-- Новый заголовок (<p>), и выделение курсивом (<em>), можно использовать (i)-->
+<p><em>Введите имя агента:</em></p>
+<!-- Новый заголовок (<p>), и зачёркивание текста (<strike>)-->
+<p><strike>Введите имя агента:</strike></p>
+<!-- Новый заголовок (<p>), и перенос некоторых букв в нижнюю часть(<sub>) -->
+<p>S<sub>O</sub>V<sub>A</sub></p>
+<!-- Новый заголовок (<p>), и перенос некоторых букв в вверхнюю часть(<sup>) -->
+<p>S<sup>O</sup>V<sup>A</sup></p><hr>
+<!-- Тег <hr> добавляет горизонтальную линию-->
+<!--Тег <abbr> создает абривиатуру, а атрибут "title" показывает описание при наведении на слово -->
+<abbr title="Sova">Sova</abbr>
+<!-- Добавляет адресс (по факту только текст)-->
+<address> Novosibirsk, Russia</address>
+<!--Добавляем новый заголовог при помощи тега <h2>,
+и отдельную его часть при помощи тега <small>,
+делаем меньше-->
+<h2>VALO<small>RANT</small></h2>
+<!--Добавляем новый заголовог при помощи тега <h2>,
+и отдельную его часть при помощи тега <big>,
+делаем больше-->
+<h2>VALO<big>RANT</big></h2>
+<!-- Тег <pre> позволяет сохранить код в его стандартном виде-->
+<pre> function SOVA(){
+    return "SOVA"
+}</pre>
+<!--Тег <code> позволяет сохранить код в его стандартном виде(аналог <pre>)-->
+<code>let x = 0;</code>
+<!-- Тег <ol> позволяет создать пронумерованый список(order lists),
+а тег <il> создаёт элементы этого списка (item lists),
+атрибут "start" позволяет указать число с которог начнется отчет,
+атрибут "type" позволяет указать в каком стиле будет нумерация пунктов-->
+<ol start="1" type="a">
+    <li>Дрон</li>
+    <li>Шоковая стрела</li>
+    <li>Ревил</li>
+    <li>Ульта</li>
+</ol>
+<!-- Тег <ul> позволяет создать непронумерованый список,
+<il> сользуется так же как и в случае с <ol>,
+атрибут "start" здесь работать не будет,
+а атрибут "type" работает, в нем можно указывать тип указателя-->
+<ul type = "circle">
+    <li>Дрон</li>
+    <li>Шоковая стрела</li>
+    <li>Ревил</li>
+    <li>Ульта</li>
+</ul>
+<!-- Тег <a>  позволяет добавить ссылку на страницу(обязательно использовать "href", "target = "_blank"" позволяет открыть ссылку в новой вкладке )-->
+<a href = "https://playvalorant.com/ru-ru/" target="_blank"> Официальный сайт Riot</a><br>
+<!-- Все тоже самое, только переход идет внутри страницы, между вашими html файлами-->
+<a href = "about.html" target="_self">Привет?</a><br>
+<!-- Вторая часть ссылки якоря, к тому, кчему мы перемещаемся-->
+<a name = "Dawn"></a>
+<a href = "#UP">Вверх</a><br>
+<!-- Ссылка для того, чтобы написать на почту, указанную в "mailto"-->
+<a href = "mailto:zevsskavkaza@gmail.com">Написать на почту</a>
+<!-- Добавляем фото(img), указываем его размер(width, height), при наведении - текст(title), и если картинка отсутствует или произошла какая то ошибка, вводиться текст(alt)-->
+<img src = "https://w.forfun.com/fetch/db/db8b8dba798b9c590e0ad387e8816211.jpeg" width="200" height="200" title="Sova" alt="Упс, здесь должен быть Sova">
+<!-- Добавляем фото находящиеся в файле, не через ссылку в интернете-->
+<img src = "Photo/i.jpg" title="Укуренный сова" width="200" height="200" alt = "Упс"> 
+<!-- Добавление таблицы, указание ее параметров(border), (width). 
+"thead" - Добавление шапки страницы,
+"tbody" - данные таблицы,
+"tfoot" - как окончаие талицы(как по мне бесполезный)-->
+<table border = "1" width = "500px">
+    <thead>
+        <tr>
+            <th>Имя Агента</th>
+            <th>Страна Агента</th>
+            <th>Возраст</th>
+        </tr>
+    </thead>
+    <tbody align = "center">
+        <tr>
+            <td>Sova</td>
+            <td>Russian</td>
+            <td>25 лет</td>
+        </tr>
+        <tr>
+            <td>Raze</td>
+            <td>Mexico</td>
+            <td>22 года</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Конец таблицы</td>
+            <td>Конец страницы</td>
+            <td>Конец страницы</td>
+        </tr>
+    </tfoot>
+   
+</table>
+<!-- подключение JS файлов-->
+<script src = "JS/JS.js"></script> 
+<!-- Теги "Div","Span" без CSS не работают-->
+<div>Просто текст</div>
+<div>Просто текст</div>
+<span>Просто текст</span><br>
+<a href = "Regist.html" target="_blank">Зарегистрироваться</a>
+<form>
+    <textarea placeholder="Ваш комментарий" maxlength="150" name="Text" id="Text">
+    </textarea><br>
+    <button>Отправить</button>
+    <select multiple size="3">
+        <option selected>----</option>
+        <option>Sova</option>
+        <option>Raze</option>
+        <option>Viper</option>
+    </select>
+    <progress max="100" value="50">Загруженно на 50%</progress>
+    <details>
+        <summary>Подробнее</summary>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Doloribus cum fugiat expedita ullam ipsam, omnis id 
+         nisi odit repellendus soluta neque fugit, rem, 
+         voluptatum possimus eum consequuntur voluptatem inventore sint?
+    </details>
+</form>
+</body>
+</html>

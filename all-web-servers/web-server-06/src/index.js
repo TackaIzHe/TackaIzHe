@@ -23,6 +23,7 @@ app.use('/', (req, res)=> {
 });
 
 
+
 app.get('/message', authHandler, (req, res) => {
     res.json({
         message: "Hello, world",

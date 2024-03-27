@@ -1,0 +1,152 @@
+//Использование библиотек
+using System;
+using System.Collections.Generic;
+
+namespace Charp
+{
+    //имя класса
+    class Program
+    {
+        //Создание пространства
+        static void Main()
+        {
+            //Console.WriteLine - выводит новую строку с текстом в поле
+            Console.WriteLine("Hello!");
+            Console.WriteLine("Hello, world!");
+            //Console.Write - вывод все в одну строку
+            Console.Write("Hello!\n");
+            Console.Write("Nikita\n");
+            //Создание переменной
+            int num = 10;
+            num = 5;
+            // Uint - только числа > 0
+            uint plusnum = 10;
+            // byte - числа > 0 до 255
+            byte bite = 255;
+            // byte - числа > 255 до 33к +-
+            short shoort = 256;
+            // float - цифра с плавающей запятой
+            float Tochka = 4.5f;
+            // double - больше диапозон чем у float
+            double Double = 4.6d;
+            // String - создание переменной с текстом
+            string word = "Nikita";
+            // char - хранит 1 символ
+            char word1 = 'H';
+            // bool - Правда и ложь (True, False)
+            bool isHappy = true;
+            /* Создаем 2 переменные, пользователь сам заполняет значения,
+            затем конвертируем их и записываем в новую переменную их сумму и так далее.*/
+            Console.Write("Введите первое число: ");
+            short number_One = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Введите второе число число: ");
+            short number_Two = Convert.ToInt16(Console.ReadLine());
+            // сумма 
+            int result = number_One + number_Two;
+            // разность
+            int result_1 = number_One - number_Two;
+            // произведение
+            int result_One = number_One * number_Two;
+            // первое число умноженное на 2
+            int result_Two = number_One * 2;
+            // первое число деленное на 2
+            float result_Three = number_One / 2;
+            // возведение в степерь числа. В скобках первое число которое надо возвести, второе коэффицент возведения 
+            double result_Four = Math.Pow(number_Two, 2);
+            // выводим результаты всех действий
+            Console.WriteLine(" Результат сложения: {0}, \n Результат вычитания: {1}, \n Результат умножения: {2},\n Результат умножения первого числа на 2: {3},  \n Результат деления первого числа на 2: {4}, \n Результат возведения первого числа во 2 степень: {5}", result, result_1, result_One, result_Two, result_Three, result_Four);
+            // запрашиваем радиус круга у пользователя
+            Console.Write("Введите радиус круга(в точности до десятых): ");
+            // конвертируем результат в double
+            double Radius = Convert.ToDouble(Console.ReadLine());
+            // вводим формулу нахождения радиуса круга
+            double Ploshad = Math.PI * Math.Pow(Radius, 2);
+            // выводим результат
+            Console.WriteLine("Площадь круга равна: {0}", Ploshad);
+            // запрашиваем оценку у пользователя
+            Console.Write("Введите вашу оценку: ");
+            // конвертируем в число
+            short otmetka = Convert.ToInt16(Console.ReadLine());
+            // применяем условный оператор, для выведения результата
+            if (otmetka == 5){
+                Console.WriteLine("Отлично!");
+            }
+            else if (otmetka == 4){
+                Console.WriteLine("Хорошо!");
+            }
+            else if (otmetka == 3){
+                Console.WriteLine("Удволетворительно.");
+            }
+            else if (otmetka <= 2){
+                Console.WriteLine("На пересдачу");
+            }
+            else {
+                Console.WriteLine("Такой оценки не существует!");
+            }
+            // запрашиваем логин и пароль у пользователя
+            Console.Write("Введите Логин: ");
+            string Login = Convert.ToString(Console.ReadLine());
+            Console.Write("Введите Пароль: ");
+            string Password = Convert.ToString(Console.ReadLine());
+            
+            if (Login == "Nikita" && Password == "123"){
+                Console.WriteLine("Доступ разрешен!");
+            }
+            else if (Login != "Nikita" && Password != "123"){
+                Console.WriteLine("Введеные данные не верны!");
+            }
+              else if (Login == "Nikita" && Password != "123"){
+                Console.WriteLine("Введеные данные не верны!");
+            }
+              else if (Login != "Nikita" && Password == "123"){
+                Console.WriteLine("Введеные данные не верны!");
+            }
+            // Метод Switch case проверяет 1 условие
+            Console.Write("LOGIN: ");
+            string login = Convert.ToString(Console.ReadLine());
+            switch(login){
+                case "Nikita": Console.WriteLine("login is true"); break;
+                default:
+                    Console.WriteLine("login is false"); break;
+            }
+            /* цикл foreach позволяет проходить по всем элементам массива
+            создаем 2-мерный массив и проходти по всем элементам
+            */
+            short[,] Numberss = {
+                {1,2,3,4,5},
+                {14,24,35,46,75},
+                {11,22,34,44,53},
+
+            };
+            foreach(short ell in Numberss){
+                Console.WriteLine("El" + ell);
+            }
+            /* создаем динамический массив. Его отличие в том,
+            что в него можно добавлять новые значения,
+            при помощи Add и библиотеки System.Collections.Generic
+            */
+            List<int> N = new List<int>(){
+                4,6,7
+            };
+            // добавляет объект
+            N.Add(40);
+            // удаляет объект
+            N.Remove(4);
+            // выводит в порядке возрастания
+            N.Sort();
+            // массив в обратном порядке
+            N.Reverse();
+            /* N.Clear - полностю очищает массив
+            N.CopyTo - копирует массив
+            N.Exists - проверить, есть ли в массиве такой то объект
+            (вернет: true,false)
+            N.Find - находит элемент и возвращает его индекс
+            */
+            foreach(int elll in N){
+                Console.WriteLine("El: " + elll);
+            }
+
+        }
+    }
+}
+

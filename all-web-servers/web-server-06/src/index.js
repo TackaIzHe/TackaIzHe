@@ -3,7 +3,9 @@ import bodyParser from "body-parser";
 import {authHandler, authRouter} from "./auth.js";
 import {notesHandler } from './notes.js';
 import {basse} from "./users.js";
-import {users} from './users.js';
+
+
+
 
 const app = express();
 
@@ -15,21 +17,15 @@ authRouter(app);
 notesHandler(app);
 basse(app);
 
+app.get('/message', authHandler, (req, res) => {
+    res.json("hello world")
+})
+
 app.use('/', (req, res)=> {
+    var q=['/','/profil'];
     res.render('main')
-    const user =users.filter((item)=>item.login==req.query.login && item.password==req.query.password)
-    console.log(user)
- 
 });
 
-
-
-
-app.get('/message', authHandler, (req, res) => {
-    res.json({
-        message: "Hello, world",
-    })
-})
 
 app.listen(
     5050,

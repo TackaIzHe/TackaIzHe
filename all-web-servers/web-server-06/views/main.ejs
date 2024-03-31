@@ -1,13 +1,21 @@
 <!doctype html>
 <html>
     <body>
-        <form style="text-align:center" id="form">
-            <label for="Login">Login</label><br>
+        <form style="text-align:center" action="/profil">
+            <label for="hesh">Hesh kod</label><br>
+            <input name="hesh" type="string" id="hesh"><br>
+            <button type="submit" >Log in</button>
+            <a href ="/register">registration</a>
+        </form>
+
+
+
+        <form style="text-align:center" method="get" action="/auth/login">
+            <label for="login">Login</label><br>
             <input name="login" type="string" id="Login"><br>
             <label for="password">password</label><br>
             <input name="password" type="password" id="password"><br>
-            <button type="submit">Log in</button>
-            <a href ="/register">registration</a>
+            <button type="submit">get hesh kod</button>
         </form>
     </body>
 </html>

@@ -1,13 +1,18 @@
 {
   "dependencies": {
+    "connect-flash": "^0.1.1",
     "express": "^4.19.2",
-    "mysql2": "^3.9.3"
+    "express-session": "^1.18.0",
+    "mysql2": "^3.9.3",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "passwort": "^1.0.4",
+    "path": "^0.12.7"
   },
   "name": "qweqwe",
   "version": "1.0.0",
   "main": "qwe.js",
-  "type":"module",
-  "devDependencies": {},
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

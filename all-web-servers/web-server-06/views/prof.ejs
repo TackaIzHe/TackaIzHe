@@ -1,6 +1,21 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
     <body>
-        <h1>hi</h1>
+        <ul>
+            <form>
+                <label for="name">name</label><br>
+                <input name="name" id="name" type="string"><br>
+                <label for="message">message</label><br>
+                <input style="height:70px ;" name="message" id="message" type="text"><br>
+                <input type="file"><br>
+                <laber for="hesh">hesh kod</laber><br>
+                <input name="hesh" id="hesh"><br>
+                <button type="submit">send</button>
+            </form>
+        
+            <% for(var i=0; i<messages.length;i++) {%>
+                <h1><%=messages[i].name %></h1> <br><h2> <%=messages[i].message %></h2>
+                <input type="string">
+            <%} %>
     </body>
 </html>

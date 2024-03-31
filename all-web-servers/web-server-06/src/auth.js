@@ -1,19 +1,19 @@
 import {v4} from 'uuid';
-
-const users = [
-    {
-        id: 1,
-        firstName: "Nikita",
-        secondName: "Sitnik",
-        username: "whywelive", // WhyWeLive
-        password: "123456"
-    }
-];
+import {users} from './users.js'
+// const users = [
+//     {
+//         id: 1,
+//         firstName: "Nikita",
+//         secondName: "Sitnik",
+//         username: "whywelive", // WhyWeLive
+//         password: "123456"
+//     }
+// ];
 
 const tokens = [];
 
 export const authHandler = (req, res, next) => {
-    const authorization = req.header('authorization');
+    const authorization = req.query.hesh;
 
     if (!authorization) {
         return res.status(401).json({
@@ -21,8 +21,8 @@ export const authHandler = (req, res, next) => {
         })
     }
 
-    const [type, token] = authorization.split(" ");
-
+    const token = authorization;
+    const type='Bearer';
     if (type !== 'Bearer') {
         return res.status(401).json({
             error: "Bad credentials (type)"
@@ -49,10 +49,10 @@ export const authRouter = (app) => {
        res.json(tokens);
     });
 
-  app.post('/auth/login', (req, res) => {
-     const {username, password} = req.body;
+  app.get('/auth/login', (req, res) => {
+     const {login, password} = req.query;
 
-     if (!username || !password) {
+     if (!login || !password) {
          return res.status(400).json({
              error: "username or password is empty"
          })
@@ -60,7 +60,7 @@ export const authRouter = (app) => {
 
      const user = users.find(
          (user) =>
-             user.username.toLowerCase() === username.toLowerCase()
+             user.login.toLowerCase() === login.toLowerCase()
              && user.password === password
      );
 

@@ -84,3 +84,4 @@ export const authRouter = (app) => {
      })
   });
 };
+export{tokens}

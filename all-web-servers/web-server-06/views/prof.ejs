@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <ul>
+            <form>
+                <label for="name">name</label><br>
+                <input name="name" id="name" type="string"><br>
+                <label for="message">message</label><br>
+                <input style="height:70px ;" name="message" id="message" type="text"><br>
+                <input type="file"><br>
+                <laber for="hesh">token</laber><br>
+                <input name="hesh" id="hesh"><br>
+                <button type="submit">send</button>
+            </form>
+            
+            <% for(var i=0; i<messages.length;i++) {%>
+                <h1><%=messages[i].name %> <h5><%=messages[i].userfirst +" "+ messages[i].usersecond %></h5> </h1> <br><h2> <%=messages[i].message %></h2><br>
+                <p><%=messages[i].Comment[i].text %> </p><br>
+                <form>
+                    <label for="hesh">token</label><br>
+                    <input name="hesh" id="hesh"><br>
+                    <label for="com">comment</label><br>
+                    <input id="com" name=com type="string">
+                    <button type="submit">send com</button>
+                </form>
+                
+            <%} %>
+    </body>
+</html>
